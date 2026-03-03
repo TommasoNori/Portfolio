@@ -1,10 +1,11 @@
 import './Footer.css';
+import currentYear from '../../utils/CurrentDate';
 
 function Footer() {
   return (
     <>
       <footer className="footer">
-        <p>&copy; 2026 Tommaso Nori. All rights reserved.</p>
+        <div>&copy; {currentYear()} Tommaso Nori. All rights reserved.</div>
       </footer>
     </>
   );
