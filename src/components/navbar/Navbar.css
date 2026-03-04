@@ -1,9 +1,9 @@
 .navbar{
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 1rem;
     position: sticky;
+    width: 100%;
 }
 
 .navbar ul {

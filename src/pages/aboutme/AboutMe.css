@@ -1,0 +1,65 @@
+.about-me-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.about-me-container h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-me-container > p {
+  font-size: 1.1rem;
+  line-height: 2;
+  text-align: justify;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 80px;
+}
+
+.cv-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 60px;
+  width: 100%;
+}
+
+.cv-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  max-width: 600px;
+}
+
+.btn-cv {
+  padding: 14px 40px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: white;
+}
