@@ -4,10 +4,10 @@ function Navbar({ items, referiment }) {
   return (
     <nav className="navbar">
       <ul>
-        {items.map((items, i) => (
-          <a key={i} href={referiment[i]}>
-            {items}
-          </a>
+        {items.map((item, i) => (
+          <li key={i}>
+            <a href={referiment[i]}>{item}</a>
+          </li>
         ))}
       </ul>
     </nav>
