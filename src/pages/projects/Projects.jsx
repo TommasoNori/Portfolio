@@ -1,15 +1,45 @@
 import ProjectContainer from "../../components/container/ProjectContainer";
+import UninotesLogo from "../../assets/img/UninotesLogo.svg";
+import universityEscape from "../../assets/img/universityEscape.png";
+import "./Projects.css";
 
 function Project() {
   return (
     <>
-      <h1>Projects</h1>
-      <ProjectContainer
-        name="Uninotes"
-        description="This is a Web project made with php"
-        image="./assets/img/UninotesLogo.png"
-        link="/https://github.com/Mattia-Pozzati/UniNotes"
-      />
+      <div className="project-page-container">
+        <div className="project-page-title">
+          <h1>Projects</h1>
+        </div>
+        <div className="onWork-project">
+          <h2>What I'm Working On</h2>
+          <p>
+            Per ora sono in fase vegetativa in totale nullafacenza, se vuoi
+            commisionarmi qualcosa scrivimi pure tramite email!
+          </p>
+        </div>
+        <div className="project-page-list">
+          <div className="project_1">
+            <ProjectContainer
+              name="Uninotes"
+              description="Collaborative platform for sharing and organizing 
+              study notes with real-time updates, authentication and subject 
+              categorization. Built with HTML, CSS, JavaScript and PHP."
+              image={UninotesLogo}
+              link="https://github.com/Mattia-Pozzati/UniNotes"
+            />
+          </div>
+          <div className="project_2">
+            <ProjectContainer
+              name="University Escape"
+              description="Interactive 2D game developed in Java with custom 
+              graphics and game logic, built with an object-oriented architecture 
+              and MVC pattern using Java Swing."
+              image={universityEscape}
+              link="https://github.com/Alejandro-the-Unyielding/OOP24-UE"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

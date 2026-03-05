@@ -9,6 +9,7 @@ import Header from "./components/layout/header/Header";
 import Home from "./pages/Home/Home";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import BackgroundImage from "./components/importer_img/Importer";
+import Projects from "./pages/Projects/Projects";
 
 function App() {
   const isLarge = window.innerWidth > 1920;
@@ -29,7 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutme" element={<AboutMe />} />
-          <Route path="/projects" element={<div>Projects</div>} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<div>Contact</div>} />
         </Routes>
       </main>

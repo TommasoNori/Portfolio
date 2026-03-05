@@ -1,0 +1,68 @@
+.project-page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 80px;
+}
+
+/* ── TITOLO ── */
+.project-page-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.project-page-title h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* ── LISTA PROGETTI ── */
+.project-page-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ── SINGOLO PROGETTO ── */
+.project-page-list > div {
+  display: flex;
+}
+
+/* ── MAIN PROJECT ── */
+.onWork-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 700px;
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 32px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: linear-gradient(160deg, rgba(13, 27, 62, 0.5), rgba(8, 13, 26, 0.5));
+  box-shadow: 0 0 40px rgba(50, 100, 200, 0.08);
+}
+
+.onWork-project h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.onWork-project p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: italic;
+}
