@@ -7,7 +7,10 @@
   overflow: hidden;
   background: linear-gradient(160deg, #0d1b3e, #080d1a);
   box-shadow: 0 0 30px rgba(50, 100, 200, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  font-family: "Orbitron", sans-serif;
 }
 
 .project-container:hover {
