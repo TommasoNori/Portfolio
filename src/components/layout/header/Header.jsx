@@ -15,22 +15,39 @@ function Header() {
           <Navbar items={items} referiment={referiment} />
         </div>
 
-        <div className="mobile-menu-toggle">
-          <button onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? "✕" : "☰"}
+        <div className={`mobile-menu-shell ${menuOpen ? "open" : ""}`}>
+          <button
+            className="mobile-menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            ☰
           </button>
-        </div>
 
-        {menuOpen && (
-          <div className="mobile-navbar">
+          <div className={`mobile-menu-content ${menuOpen ? "show" : ""}`}>
             <Navbar
               items={items}
               referiment={referiment}
               onLinkClick={() => setMenuOpen(false)}
             />
           </div>
-        )}
+          <div className="mobile-menu-social">
+            <a href="https://github.com/tommasonori" target="_blank">
+              GitHub
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              LinkedIn
+            </a>
+            <a href="mailto:notommyri@gmail.com">Email</a>
+          </div>
+        </div>
       </div>
+
+      {menuOpen && (
+        <div
+          className="mobile-menu-overlay"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )}
     </header>
   );
 }
