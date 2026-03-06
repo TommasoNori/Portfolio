@@ -4,7 +4,7 @@ function HeroSection() {
   return (
     <>
       <div className="hero-section">
-        <h1>Welcome to My website</h1>
+        <h1 className="page-title">Welcome to My Website</h1>
         <p>
           Hi, my name is Tommaso and I will show you what my mind has created,
           will create and most important what I am creating right now.

@@ -3,25 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px 80px;
-  font-family: "Orbitron", sans-serif;
+  padding: 40px 20px 80px;
 }
 
-/* ── TITOLO ── */
-.project-page-title {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.project-page-title h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.87);
-}
-
-/* ── LISTA PROGETTI ── */
 .project-page-list {
   display: flex;
   flex-wrap: wrap;
@@ -29,14 +13,13 @@
   gap: 32px;
   width: 100%;
   max-width: 1200px;
+  animation: fadeUp 0.8s 0.4s ease both;
 }
 
-/* ── SINGOLO PROGETTO ── */
 .project-page-list > div {
   display: flex;
 }
 
-/* ── MAIN PROJECT ── */
 .onWork-project {
   display: flex;
   flex-direction: column;
@@ -46,19 +29,23 @@
   max-width: 700px;
   width: 100%;
   margin-bottom: 60px;
-  padding: 32px 40px;
+  padding: 50px 60px;
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  background: linear-gradient(160deg, rgba(13, 27, 62, 0.5), rgba(8, 13, 26, 0.5));
-  box-shadow: 0 0 40px rgba(50, 100, 200, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  animation: fadeUp 0.8s 0.2s ease both;
 }
 
 .onWork-project h2 {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .onWork-project p {
@@ -66,4 +53,9 @@
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.55);
   font-style: italic;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }

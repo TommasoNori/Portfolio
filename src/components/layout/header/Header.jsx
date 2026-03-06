@@ -5,10 +5,12 @@ function Header() {
   return (
     <>
       <header className="header">
-        <Navbar
-          items={["Home", "About me ", "Projects", "Contact"]}
-          referiment={["/", "/aboutme", "/projects", "/contact"]}
-        />
+        <div className="header-navbar-container">
+          <Navbar
+            items={["Home", "About me ", "Projects", "Contact"]}
+            referiment={["/", "/aboutme", "/projects", "/contact"]}
+          />
+        </div>
       </header>
     </>
   );

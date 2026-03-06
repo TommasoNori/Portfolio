@@ -7,14 +7,12 @@ function Project() {
   return (
     <>
       <div className="project-page-container">
-        <div className="project-page-title">
-          <h1>Projects</h1>
-        </div>
+        <h1 className="page-title">Projects</h1>
         <div className="onWork-project">
           <h2>What I'm Working On</h2>
           <p>
-            Per ora sono in fase vegetativa in totale nullafacenza, se vuoi
-            commisionarmi qualcosa scrivimi pure tramite email!
+            Currently open to new projects — if you'd like to commission
+            something, feel free to reach out via email!
           </p>
         </div>
         <div className="project-page-list">

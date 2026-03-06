@@ -2,7 +2,6 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,16 +10,10 @@
   padding: 2rem;
   gap: 1.5rem;
   z-index: 1;
-  font-family: "Orbitron", sans-serif;
 }
 
 .hero-section h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: white;
-  margin: 0;
-  animation: fadeUp 0.8s ease forwards;
+  animation: fadeUp 0.8s ease both;
 }
 
 .hero-section p {
@@ -39,28 +32,23 @@
   font-weight: 600;
   letter-spacing: 0.05em;
   border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(100, 180, 255, 0.5);
   background: transparent;
-  color: white;
+  color: rgba(100, 180, 255, 0.9);
   cursor: pointer;
   transition: all 0.3s;
   animation: fadeUp 0.8s 0.4s ease both;
 }
 
 .hero-section button:hover {
-  background: white;
-  color: #0a0a0a;
-  border-color: white;
+  background: rgba(100, 180, 255, 0.1);
+  border-color: rgba(100, 180, 255, 0.9);
+  color: white;
+  text-shadow: 0 0 8px rgba(100, 180, 255, 0.4);
   transform: translateY(-2px);
 }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
