@@ -1,0 +1,54 @@
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-section p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 500px;
+  line-height: 1.7;
+  margin: 0;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.hero-section button {
+  margin-top: 0.5rem;
+  padding: 0.85rem 2.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 6px;
+  border: 1px solid rgba(100, 180, 255, 0.5);
+  background: transparent;
+  color: rgba(100, 180, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.hero-section button:hover {
+  background: rgba(100, 180, 255, 0.1);
+  border-color: rgba(100, 180, 255, 0.9);
+  color: white;
+  text-shadow: 0 0 8px rgba(100, 180, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

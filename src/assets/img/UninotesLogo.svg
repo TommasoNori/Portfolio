@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+  <!-- Sfondo bianco -->
+  <rect width="320" height="200" fill="#ffffff"/>
+
+  <!-- Testo Uninotes nero bold centrato -->
+  <text
+    x="160"
+    y="115"
+    font-family="'Arial Black', 'Arial Bold', Arial, sans-serif"
+    font-size="52"
+    font-weight="900"
+    text-anchor="middle"
+    fill="#111111"
+    letter-spacing="-1"
+  >Uninotes</text>
+</svg>

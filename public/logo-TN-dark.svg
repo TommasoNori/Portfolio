@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="60%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <radialGradient id="nebulaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="nebulaGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="letterGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="90"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer ring glow -->
+  <circle cx="100" cy="100" r="97" fill="none" stroke="#4a9eff" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="100" cy="100" r="93" fill="none" stroke="#4a9eff" stroke-width="0.3" opacity="0.15"/>
+
+  <!-- Main circle background -->
+  <circle cx="100" cy="100" r="90" fill="url(#spaceBg)"/>
+
+  <!-- Nebula clouds inside circle -->
+  <g clip-path="url(#circleClip)">
+    <circle cx="75" cy="85" r="45" fill="url(#nebulaGlow)"/>
+    <circle cx="130" cy="115" r="40" fill="url(#nebulaGlow2)"/>
+
+    <!-- Stars - various sizes -->
+    <circle cx="48" cy="55" r="0.8" fill="white" opacity="0.9" filter="url(#starGlow)"/>
+    <circle cx="62" cy="42" r="1.2" fill="white" opacity="0.8"/>
+    <circle cx="135" cy="48" r="0.7" fill="white" opacity="0.7"/>
+    <circle cx="155" cy="60" r="1.4" fill="#a0d0ff" opacity="0.9" filter="url(#starGlow)"/>
+    <circle cx="168" cy="80" r="0.6" fill="white" opacity="0.6"/>
+    <circle cx="158" cy="110" r="0.9" fill="white" opacity="0.8"/>
+    <circle cx="165" cy="148" r="1.2" fill="#ffd0a0" opacity="0.7"/>
+    <circle cx="145" cy="162" r="0.7" fill="white" opacity="0.6"/>
+    <circle cx="110" cy="170" r="1" fill="white" opacity="0.7"/>
+    <circle cx="75" cy="165" r="0.8" fill="#c0c0ff" opacity="0.8"/>
+    <circle cx="45" cy="155" r="1.3" fill="white" opacity="0.9" filter="url(#starGlow)"/>
+    <circle cx="35" cy="120" r="0.6" fill="white" opacity="0.5"/>
+    <circle cx="38" cy="90" r="1" fill="#a0d0ff" opacity="0.7"/>
+    <circle cx="52" cy="78" r="0.5" fill="white" opacity="0.6"/>
+    <circle cx="120" cy="35" r="1.5" fill="white" opacity="0.85" filter="url(#starGlow)"/>
+    <circle cx="88" cy="30" r="0.7" fill="white" opacity="0.6"/>
+    <circle cx="175" cy="130" r="0.8" fill="white" opacity="0.5"/>
+    <circle cx="30" cy="65" r="1" fill="#ffe0c0" opacity="0.7"/>
+    <!-- Tiny background stars -->
+    <circle cx="105" cy="155" r="0.5" fill="white" opacity="0.4"/>
+    <circle cx="140" cy="80" r="0.4" fill="white" opacity="0.35"/>
+    <circle cx="60" cy="115" r="0.4" fill="white" opacity="0.3"/>
+    <circle cx="85" cy="170" r="0.4" fill="white" opacity="0.35"/>
+    <circle cx="170" cy="100" r="0.5" fill="white" opacity="0.3"/>
+
+    <!-- Orbital arc -->
+    <ellipse cx="100" cy="100" rx="72" ry="18" fill="none" stroke="#4a9eff" stroke-width="0.6" opacity="0.2" transform="rotate(-25 100 100)"/>
+    <!-- Small planet dot on orbit -->
+    <circle cx="148" cy="90" r="2.5" fill="#4a9eff" opacity="0.5" filter="url(#starGlow)" transform="rotate(-25 100 100)"/>
+  </g>
+
+  <!-- Inner subtle ring -->
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#4a9eff" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- Letters TN - white bold, centered, spaced -->
+  <!-- T glow shadow: x 58-94, center 76 -->
+  <line x1="58" y1="76" x2="94" y2="76" stroke="white" stroke-width="14" stroke-linecap="round" opacity="0.12"/>
+  <line x1="76" y1="76" x2="76" y2="128" stroke="white" stroke-width="14" stroke-linecap="round" opacity="0.12"/>
+  <!-- N glow shadow: x 106-138, center 122 -->
+  <line x1="106" y1="76" x2="106" y2="128" stroke="white" stroke-width="14" stroke-linecap="round" opacity="0.12"/>
+  <line x1="106" y1="76" x2="138" y2="128" stroke="white" stroke-width="14" stroke-linecap="round" opacity="0.12"/>
+  <line x1="138" y1="76" x2="138" y2="128" stroke="white" stroke-width="14" stroke-linecap="round" opacity="0.12"/>
+
+  <!-- T solid -->
+  <line x1="58" y1="76" x2="94" y2="76" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <line x1="76" y1="76" x2="76" y2="128" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <!-- N solid -->
+  <line x1="106" y1="76" x2="106" y2="128" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <line x1="106" y1="76" x2="138" y2="128" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  <line x1="138" y1="76" x2="138" y2="128" stroke="white" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Accent dots bottom -->
+  <circle cx="100" cy="148" r="2" fill="#4a9eff" opacity="0.7" filter="url(#starGlow)"/>
+  <circle cx="89" cy="148" r="1" fill="#4a9eff" opacity="0.4"/>
+  <circle cx="111" cy="148" r="1" fill="#4a9eff" opacity="0.4"/>
+</svg>
