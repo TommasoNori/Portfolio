@@ -1,4 +1,5 @@
-import './Navbar.css';
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar({ items, referiment }) {
   return (
@@ -6,7 +7,7 @@ function Navbar({ items, referiment }) {
       <ul>
         {items.map((item, i) => (
           <li key={i}>
-            <a href={referiment[i]}>{item}</a>
+            <Link to={referiment[i]}>{item}</Link>
           </li>
         ))}
       </ul>
