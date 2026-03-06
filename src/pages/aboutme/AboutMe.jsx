@@ -45,7 +45,7 @@ function AboutMe() {
             className="btn-cv"
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/Curriculum_Tommaso_Nori.pdf";
+              link.href = `${import.meta.env.BASE_URL}Curriculum_Tommaso_Nori.pdf`;
               link.download = "Tommaso_Nori_CV.pdf";
               link.click();
             }}
