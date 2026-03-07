@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 
 :root {
-  font-family: "Orbitron", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Exo 2", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.87);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -17,17 +25,10 @@ body {
   background-color: #030810;
   overflow-x: hidden;
   scrollbar-width: none;
+  font-family: "Exo 2", sans-serif;
 }
 
 body::-webkit-scrollbar {
-  display: none;
-}
-
-html {
-  scrollbar-width: none;
-}
-
-html::-webkit-scrollbar {
   display: none;
 }
 
@@ -43,7 +44,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
+  font-family: "Orbitron", sans-serif;
   background-color: #1a1a1a;
   color: white;
   cursor: pointer;
@@ -54,7 +55,7 @@ button:hover {
   border-color: #646cff;
 }
 
-/* ── TITOLO GLOBALE ── */
+/* Titoli globali */
 .page-title {
   font-family: "Orbitron", sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
@@ -67,7 +68,31 @@ button:hover {
   animation: fadeUp 0.8s ease both;
 }
 
+/* Testi lunghi */
+p,
+li,
+input,
+textarea,
+label {
+  font-family: "Exo 2", sans-serif;
+}
+
+/* Utility per testi descrittivi */
+.section-text {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
