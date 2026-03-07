@@ -42,7 +42,7 @@ function AboutMe() {
             the same stuff written in there anyway.
           </p>
           <button
-            className="btn-cv"
+            className="btn-primary"
             onClick={() => {
               const link = document.createElement("a");
               link.href = `${import.meta.env.BASE_URL}Curriculum_Tommaso_Nori.pdf`;

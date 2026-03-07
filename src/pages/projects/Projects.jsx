@@ -2,6 +2,7 @@ import ProjectContainer from "../../components/container/ProjectContainer";
 import UninotesLogo from "../../assets/img/UninotesLogo.svg";
 import universityEscape from "../../assets/img/universityEscape.png";
 import "./Projects.css";
+import reactlogo from "../../assets/react.svg";
 
 function Project() {
   return (
@@ -34,6 +35,22 @@ function Project() {
               and MVC pattern using Java Swing."
               image={universityEscape}
               link="https://github.com/Alejandro-the-Unyielding/OOP24-UE"
+            />
+          </div>
+        </div>
+        <div className="project-website">
+          <h2 className="project-website-title">This Website</h2>
+          <p>
+            This website is a personal project built with React and Vite,
+            created to explore modern frontend development and improve my
+            skills.
+          </p>
+          <div className="tech-logos">
+            <img src={reactlogo} alt="React Logo" className="react-logo" />
+            <img
+              src={`${import.meta.env.BASE_URL}vite.svg`}
+              alt="Vite Logo"
+              className="vite-logo"
             />
           </div>
         </div>

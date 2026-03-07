@@ -12,13 +12,28 @@
   z-index: 1;
 }
 
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.42) 0%,
+    rgba(0, 0, 0, 0.22) 38%,
+    rgba(0, 0, 0, 0.06) 68%,
+    transparent 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
 .hero-section h1 {
   animation: fadeUp 0.8s ease both;
 }
 
 .hero-section p {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.78);
   max-width: 500px;
   line-height: 1.7;
   margin: 0;
@@ -49,6 +64,12 @@
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
