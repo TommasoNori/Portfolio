@@ -10,6 +10,7 @@ import AboutMe from "./pages/aboutme/AboutMe";
 import BackgroundImage from "./components/importer_img/Importer";
 import Projects from "./pages/projects/Projects";
 import Contact from "./pages/contact/Contact";
+import ScrollUp from "./components/layout/ScrollUp";
 
 function App() {
   const isLarge = window.innerWidth > 1920;
@@ -26,6 +27,7 @@ function App() {
       <Stars stars={stars} />
       <FallingStars count={1} />
       <Header />
+      <ScrollUp />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
