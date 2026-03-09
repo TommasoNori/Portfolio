@@ -82,8 +82,7 @@ Portfolio/
 
 Feel free to reach out!
 
-- 📧 Email: your.email@example.com
-- 💼 LinkedIn: [linkedin.com/in/tommasononri](#)
+- 📧 Email: notommyri@gmail.com 
 - 🐙 GitHub: [github.com/TommasoNori](https://github.com/TommasoNori)
 
 ---
