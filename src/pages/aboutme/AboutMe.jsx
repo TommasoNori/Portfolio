@@ -1,4 +1,5 @@
 import "./AboutMe.css";
+import TimeLineSection from "../../components/TimeLineSection/TimeLineSection";
 
 function AboutMe() {
   return (
@@ -53,6 +54,9 @@ function AboutMe() {
             Download my CV
           </button>
         </div>
+      </div>
+      <div className="aboutme-timeline-section">
+        <TimeLineSection />
       </div>
     </div>
   );

@@ -1,0 +1,80 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #0d1b3e, #080d1a);
+  box-shadow: 0 0 30px rgba(50, 100, 200, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  font-family: "Orbitron", sans-serif;
+}
+
+.project-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 50px rgba(50, 100, 200, 0.25);
+}
+
+/* ── IMMAGINE ── */
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-container:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* ── CONTENT ── */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.project-content h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0;
+}
+
+.project-content a {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 8px 20px;
+  border: 1px solid rgba(100, 180, 255, 0.5);
+  color: rgba(100, 180, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.project-content a:hover {
+  background: rgba(100, 180, 255, 0.1);
+  border-color: rgba(100, 180, 255, 0.9);
+  color: white;
+}
