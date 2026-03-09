@@ -34,29 +34,28 @@ function AboutMe() {
             through hands-on projects and self-study.
           </p>
         </div>
-
-        <div className="cv-section">
-          <p>
-            I know you skipped everything. No judgment — I've done it a thousand
-            times too. If you actually read it all, you're a legend and you
-            truly deserve to download my CV. If you didn't... well, you'll find
-            the same stuff written in there anyway.
-          </p>
-          <button
-            className="btn-primary"
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = `${import.meta.env.BASE_URL}Curriculum_Tommaso_Nori.pdf`;
-              link.download = "Tommaso_Nori_CV.pdf";
-              link.click();
-            }}
-          >
-            Download my CV
-          </button>
-        </div>
       </div>
       <div className="aboutme-timeline-section">
         <TimeLineSection />
+      </div>
+      <div className="cv-section">
+        <p>
+          I know you skipped everything. No judgment — I've done it a thousand
+          times too. If you actually read it all, you're a legend and you truly
+          deserve to download my CV. If you didn't... well, you'll find the same
+          stuff written in there anyway.
+        </p>
+        <button
+          className="btn-primary"
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = `${import.meta.env.BASE_URL}Curriculum_Tommaso_Nori.pdf`;
+            link.download = "Tommaso_Nori_CV.pdf";
+            link.click();
+          }}
+        >
+          Download my CV
+        </button>
       </div>
     </div>
   );

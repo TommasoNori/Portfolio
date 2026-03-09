@@ -1,87 +1,178 @@
 .about-me-container {
+  width: 100%;
   min-height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 80px;
+
+  padding: 40px 20px 100px;
+  box-sizing: border-box;
 }
+
+/* CARD ABOUT ME */
 
 .about-me-card {
+  width: 100%;
+  max-width: 860px;
+
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+
+  border-radius: 18px;
+
   padding: 50px 60px;
-  max-width: 860px;
-  width: 100%;
+
   backdrop-filter: blur(8px);
+
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 24px rgba(0, 229, 255, 0.05);
+
   animation: fadeUp 0.8s 0.2s ease both;
+
+  box-sizing: border-box;
 }
 
+/* TESTO */
+
 .about-me-txt {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   line-height: 2;
   text-align: justify;
-  color: rgba(255, 255, 255, 0.7);
+
+  color: rgba(255, 255, 255, 0.72);
+
   margin-bottom: 50px;
 }
+
+.about-me-txt p {
+  margin: 0;
+}
+
+/* CV SECTION */
 
 .cv-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+
+  gap: 28px;
+
   text-align: center;
+
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+
   padding-top: 40px;
 }
 
 .cv-section p {
+  margin: 0;
+
   font-size: 1rem;
   line-height: 1.8;
+
   color: rgba(255, 255, 255, 0.6);
+
   font-style: italic;
+
   max-width: 600px;
 }
 
-.btn-cv {
-  padding: 14px 40px;
-  background: transparent;
-  border: 1px solid rgba(100, 180, 255, 0.5);
-  color: rgba(100, 180, 255, 0.9);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* TIMELINE SECTION */
+
+.aboutme-timeline-section {
+  width: 100%;
+
+  margin-top: 110px;
+
+  padding-top: 20px;
+
+  box-sizing: border-box;
 }
 
-.btn-cv:hover {
-  background: rgba(100, 180, 255, 0.1);
-  border-color: rgba(100, 180, 255, 0.9);
-  color: white;
-  text-shadow: 0 0 8px rgba(100, 180, 255, 0.4);
-}
+/* ANIMAZIONE */
 
 @keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .about-me-card {
+    padding: 40px 36px;
+  }
+
+  .aboutme-timeline-section {
+    margin-top: 90px;
+  }
+
+}
+
 @media (max-width: 768px) {
+
+  .about-me-container {
+    padding: 30px 16px 80px;
+  }
+
+  .about-me-card {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
   .about-me-txt {
     text-align: left;
-    line-height: 1.7;
+    line-height: 1.8;
     font-size: 1rem;
-    letter-spacing: 0.5px;
+
+    margin-bottom: 36px;
   }
+
+  .cv-section {
+    gap: 22px;
+    padding-top: 30px;
+  }
+
+  .cv-section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .aboutme-timeline-section {
+    margin-top: 70px;
+    padding-top: 10px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .about-me-card {
+    padding: 26px 18px;
+  }
+
+  .about-me-txt {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+
+  .cv-section p {
+    font-size: 0.92rem;
+  }
+
+  .aboutme-timeline-section {
+    margin-top: 56px;
+  }
+
 }

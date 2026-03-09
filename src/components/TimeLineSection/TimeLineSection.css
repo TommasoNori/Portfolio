@@ -1,0 +1,171 @@
+.timeline-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+/* titolo sezione */
+
+.timeline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #4ea1ff;
+}
+
+/* contenitore timeline */
+
+.timeline-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* linea centrale */
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0,229,255,0.2),
+    rgba(0,229,255,0.8),
+    rgba(0,229,255,0.2)
+  );
+
+  box-shadow: 0 0 10px rgba(0,229,255,0.4);
+}
+
+/* item base */
+
+.timeline-item-right,
+.timeline-item-left {
+  position: relative;
+  width: 50%;
+  margin: 4rem 0;
+}
+
+/* card a destra */
+
+.timeline-item-right {
+  margin-left: auto;
+  padding-left: 4rem;
+}
+
+/* card a sinistra */
+
+.timeline-item-left {
+  margin-right: auto;
+  padding-right: 4rem;
+}
+
+/* larghezza card */
+
+.timeline-item-right .time-line-container,
+.timeline-item-left .time-line-container {
+  max-width: 500px;
+}
+
+/* collegamento card -> linea */
+
+.timeline-item-right .time-line-container::after,
+.timeline-item-left .time-line-container::after {
+
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 40px;
+  height: 2px;
+
+  background: rgba(0,229,255,0.3);
+}
+
+/* collegamento destra */
+
+.timeline-item-right .time-line-container::after {
+  left: -40px;
+}
+
+/* collegamento sinistra */
+
+.timeline-item-left .time-line-container::after {
+  right: -40px;
+}
+
+/* nodo centrale */
+
+.timeline-item-right::before,
+.timeline-item-left::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #08101f;
+
+  border: 2px solid #00e5ff;
+
+  box-shadow:
+    0 0 10px rgba(0,229,255,0.8),
+    0 0 25px rgba(0,229,255,0.4);
+}
+
+/* nodo lavoro */
+
+.timeline-item-work::before {
+  border-color: #a857ff;
+
+  box-shadow:
+    0 0 10px rgba(168,87,255,0.8),
+    0 0 25px rgba(168,87,255,0.4);
+}
+
+/* nodo education */
+
+.timeline-item-education::before {
+  border-color: #00e5ff;
+}
+
+@media (max-width: 900px) {
+
+  .timeline-wrapper::before {
+    left: 20px;
+  }
+
+  .timeline-item-right,
+  .timeline-item-left {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 0;
+    margin: 3rem 0;
+  }
+
+  .timeline-item-right .time-line-container::after,
+  .timeline-item-left .time-line-container::after {
+    left: -40px;
+    right: auto;
+  }
+
+}
