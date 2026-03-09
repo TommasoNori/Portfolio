@@ -6,10 +6,10 @@ const sendEmail = (e) => {
 
   emailjs
     .sendForm(
-      "service_delrjta", // Service ID
-      "template_2nu7lo6", // Template ID
+      import.meta.env.VITE_EMAIL_SERVICE_ID, // Service ID
+      import.meta.env.VITE_EMAIL_TEMPLATE_ID, // Template ID
       e.target,
-      "zOFsO88yeUbp8r9t7", // Public Key
+      import.meta.env.VITE_EMAIL_PUBLIC_KEY, // Public Key
     )
     .then(() => {
       alert("Message sent successfully!");
