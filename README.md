@@ -2,7 +2,7 @@
 
 Personal portfolio website built with **React + Vite**, featuring an animated starfall background, downloadable CV, project showcase, and a working contact form.
 
-🔗 **Live site:** [tommasonori.github.io/Portfolio](https://tommasononri.github.io/Portfolio)
+🔗 **Live site:** [tommasonori.github.io/Portfolio](https://tommasonori.github.io/Portfolio)
 
 ---
 
