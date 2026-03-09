@@ -1,16 +1,93 @@
-# React + Vite
+# 🌟 Portfolio – Tommaso Nori
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with **React + Vite**, featuring an animated starfall background, downloadable CV, project showcase, and a working contact form.
 
-Currently, two official plugins are available:
+🔗 **Live site:** [tommasononri.github.io/Portfolio](https://tommasononri.github.io/Portfolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **About Me** – Short bio with a downloadable CV
+- **Projects** – Showcase of university and personal projects, updated over time
+- **Contact** – Contact form with direct email delivery via [EmailJS](https://www.emailjs.com/), plus email and phone info
+- **Animated Background** – Dynamic shooting stars built with the HTML5 Canvas API
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18, Vite |
+| Styling | CSS |
+| Animation | HTML5 Canvas API |
+| Email | EmailJS |
+| Hosting | GitHub Pages |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 18
+- npm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/TommasoNori/Portfolio.git
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+### Build & Deploy
+
+```bash
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+---
+
+## 📁 Project Structure
+
+```
+Portfolio/
+├── public/          # Static assets (favicon, CV PDF, etc.)
+├── src/
+│   ├── components/  # React components (Navbar, About, Projects, Contact, etc.)
+│   ├── assets/      # Images and icons
+│   └── main.jsx     # App entry point
+├── index.html
+├── vite.config.js
+└── package.json
+```
+
+---
+
+## 📬 Contact
+
+Feel free to reach out!
+
+- 📧 Email: your.email@example.com
+- 💼 LinkedIn: [linkedin.com/in/tommasononri](#)
+- 🐙 GitHub: [github.com/TommasoNori](https://github.com/TommasoNori)
+
+---
+
+## 📄 License
+
+© 2026 Tommaso Nori. All rights reserved.
