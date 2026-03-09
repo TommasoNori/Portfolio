@@ -1,4 +1,24 @@
 import "./Contact.css";
+import emailjs from "@emailjs/browser";
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs
+    .sendForm(
+      "service_delrjta", // Service ID
+      "template_2nu7lo6", // Template ID
+      e.target,
+      "zOFsO88yeUbp8r9t7", // Public Key
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+      e.target.reset();
+    })
+    .catch(() => {
+      alert("Failed to send message.");
+    });
+};
 
 function Contact() {
   return (
@@ -16,7 +36,7 @@ function Contact() {
           </p>
         </div>
         <div>
-          <form action="" className="contact-form">
+          <form className="contact-form" onSubmit={sendEmail}>
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">Name</label>
