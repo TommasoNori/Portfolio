@@ -1,14 +1,32 @@
-import "./AboutMe.css";
 import TimeLineSection from "../../components/TimeLineSection/TimeLineSection";
 
 function AboutMe() {
   return (
-    <div className="about-me-container">
-      <h1 className="page-title">About Me</h1>
+    <section className="flex min-h-screen w-full flex-col items-center px-4 pt-10 pb-24 md:px-5 md:pt-10 md:pb-[100px]">
+      <h1 className="mb-10 text-3xl font-bold text-white md:text-4xl">
+        About Me
+      </h1>
 
-      <div className="about-me-card">
-        <div className="about-me-txt">
-          <p>
+      <div
+        className="
+          w-full max-w-[860px] box-border rounded-[18px]
+          border border-white/10 bg-white/5
+          px-[18px] py-[26px]
+          shadow-[0_8px_32px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.06),0_0_24px_rgba(0,229,255,0.05)]
+          backdrop-blur-[8px]
+          animate-[fadeUp_0.8s_0.2s_ease_both]
+          sm:px-6 sm:py-8
+          md:px-[60px] md:py-[50px]
+        "
+      >
+        <div
+          className="
+            mb-9 text-left text-[0.96rem] leading-[1.75] text-white/70
+            sm:text-base sm:leading-[1.8]
+            md:mb-[50px] md:text-[1.08rem] md:leading-[2] md:text-justify
+          "
+        >
+          <p className="m-0">
             My name is Tommaso Nori, I was born and raised in Rimini. From a
             young age I developed a deep passion for computers and technology,
             which led me to choose a scientific high school with a
@@ -35,16 +53,32 @@ function AboutMe() {
           </p>
         </div>
       </div>
-      <div className="aboutme-timeline-section">
+
+      <div className="w-full pt-[10px] mt-14 sm:mt-[70px] md:mt-[110px] md:pt-5">
         <TimeLineSection />
       </div>
-      <div className="cv-section">
-        <p>
+
+      <div
+        className="
+          mt-10 flex flex-col items-center gap-[22px]
+          border-t border-white/10 pt-[30px]
+          text-center
+          md:gap-7 md:pt-10
+        "
+      >
+        <p
+          className="
+            m-0 max-w-[600px] text-[0.92rem] italic leading-[1.7] text-white/60
+            sm:text-[0.95rem]
+            md:text-base md:leading-[1.8]
+          "
+        >
           I know you skipped everything. No judgment — I've done it a thousand
           times too. If you actually read it all, you're a legend and you truly
           deserve to download my CV. If you didn't... well, you'll find the same
           stuff written in there anyway.
         </p>
+
         <button
           className="btn-primary"
           onClick={() => {
@@ -57,7 +91,7 @@ function AboutMe() {
           Download my CV
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 
