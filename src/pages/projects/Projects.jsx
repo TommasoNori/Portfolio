@@ -1,4 +1,4 @@
-import ProjectContainer from "../../components/container/ProjectContainer";
+import ProjectContainer from "../../components/container/ProjectContainer/ProjectContainer";
 import UninotesLogo from "../../assets/img/UninotesLogo.svg";
 import universityEscape from "../../assets/img/universityEscape.png";
 import "./Projects.css";

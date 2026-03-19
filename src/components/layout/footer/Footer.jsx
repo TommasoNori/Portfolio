@@ -1,5 +1,5 @@
 import "./Footer.css";
-import currentYear from "../../../utils/CurrentDate";
+import currentYear from "../../../utils/Date";
 
 function Footer() {
   return (

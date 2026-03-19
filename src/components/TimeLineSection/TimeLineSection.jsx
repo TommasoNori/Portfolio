@@ -1,4 +1,4 @@
-import TimeLineContainer from "../container/TimeLineContainer/TimeLineContainer";
+import TimeLineContainer from "../container/TimeLineContainer";
 import "./TimeLineSection.css";
 
 function TimeLineSection() {
