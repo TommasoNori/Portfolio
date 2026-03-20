@@ -1,11 +1,7 @@
-import HeroSection from "../feature/HeroHome";
+import HeroHome from "../feature/HeroHome";
 
 function Home() {
-  return (
-    <div className="home">
-      <HeroSection />
-    </div>
-  );
+  return <HeroHome />;
 }
 
 export default Home;
