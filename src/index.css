@@ -1,97 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap");
 @import "tailwindcss";
 
-:root {
-  font-family: "Exo 2", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+@theme {
+  --font-sans: "Exo 2", system-ui, sans-serif;
+  --font-orbitron: "Orbitron", system-ui, sans-serif;
 }
 
-html {
-  scrollbar-width: none;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    background-color: #030810;
+    font-family: "Exo 2", system-ui, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.87);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  p,
+  li,
+  input,
+  textarea,
+  label {
+    font-family: "Exo 2", system-ui, sans-serif;
+  }
 }
 
-html::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #030810;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  font-family: "Exo 2", sans-serif;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: none;
-}
-
-.btn-primary {
-  padding: 14px 40px;
-  border-radius: 12px;
-  border: 1px solid rgba(100, 180, 255, 0.4);
-  background: rgba(100, 180, 255, 0.05);
-  font-family: "Orbitron", sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(100, 180, 255, 0.9);
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.btn-primary:hover {
-  background: rgba(100, 180, 255, 0.12);
-  border-color: rgba(100, 180, 255, 0.8);
-  box-shadow: 0 0 12px rgba(100, 180, 255, 0.35);
-  transform: translateY(-1px);
-}
-
-/* Titoli globali */
-.page-title {
-  font-family: "Orbitron", sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 800;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 60px;
-  text-shadow:
-    0 0 8px rgba(255, 255, 255, 0.18),
-    0 0 24px rgba(100, 180, 255, 0.14);
-  animation: fadeUp 0.8s ease both;
-}
-
-/* Testi lunghi */
-p,
-li,
-input,
-textarea,
-label {
-  font-family: "Exo 2", sans-serif;
-}
-
-/* Utility per testi descrittivi */
-.section-text {
-  font-family: "Exo 2", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  letter-spacing: 0.2px;
-  color: rgba(255, 255, 255, 0.78);
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease both;
+  }
 }
 
 @keyframes fadeUp {
@@ -99,6 +72,7 @@ label {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

@@ -1,8 +1,8 @@
 function BioContainer() {
   return (
     <div className="rounded-[28px] border border-cyan-400/20 bg-[#050d1b]/70 px-8 py-8 text-white shadow-[0_0_28px_rgba(0,255,255,0.10)] backdrop-blur-sm md:px-10 md:py-10 xl:px-12 xl:py-12">
-      <div className="text-left text-[14px] leading-9 text-slate-300 md:text-[15px]">
-        <p className="mb-4">
+      <div className="text-left text-[14px] leading-8 text-slate-300 md:text-[15px] md:leading-9">
+        <p className="mb-5">
           My name is{" "}
           <span className="font-semibold text-cyan-400">Tommaso Nori</span>, I
           was born and raised in Rimini. From a young age I developed a strong
@@ -12,7 +12,7 @@ function BioContainer() {
           Riccione, where I graduated in 2023.
         </p>
 
-        <p className="mb-4">
+        <p className="mb-5">
           Right after graduating, I enrolled in Computer Science and Engineering
           at the{" "}
           <span className="text-violet-400">

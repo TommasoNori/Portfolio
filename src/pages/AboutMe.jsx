@@ -1,22 +1,38 @@
-import WhoIamContainer from "../../components/container/WhoIamContainer";
-import BioContainer from "../../components/container/BioContainer";
-import TimeLineSection from "../../components/TimeLineSection";
+import WhoIamContainer from "../components/container/WhoIamContainer";
+import BioContainer from "../components/container/BioContainer";
+import TimeLineSection from "../components/TimeLineSection";
+import { motion } from "framer-motion";
 
 function AboutMe() {
   return (
-    <section className="relative z-10 w-full px-6 py-20 md:px-10 xl:px-16">
-      <div className="mx-auto max-w-5xl">
-        <div className="grid items-start gap-12 md:grid-cols-[1fr_2fr]">
-          <WhoIamContainer />
-          <BioContainer />
+    <section className="relative z-10 w-full px-6 py-16 md:px-10 md:py-20 xl:px-16">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
+        <div className="grid w-full max-w-6xl gap-8 md:gap-10 xl:grid-cols-[320px_minmax(0,1fr)]">
+          <motion.div
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <WhoIamContainer />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+          >
+            <BioContainer />
+          </motion.div>
         </div>
 
-        <div className="mx-auto mt-20 w-full max-w-[920px]">
+        <div className="mt-20 w-full max-w-6xl">
           <TimeLineSection />
         </div>
 
-        <div className="mt-16 mb-24 flex flex-col items-center gap-6 border-t border-white/10 pt-10 text-center">
-          <p className="max-w-[700px] text-xs italic leading-7 text-white/60 sm:text-sm sm:leading-8">
+        <div className="mt-16 mb-24 flex w-full max-w-4xl flex-col items-center gap-6 border-t border-white/10 pt-10 text-center">
+          <p className="text-xs italic leading-7 text-white/60 sm:text-sm sm:leading-8">
             I know you skipped everything. No judgment — I&apos;ve done it a
             thousand times too. If you actually read it all, you&apos;re a
             legend and you truly deserve to download my CV. If you
