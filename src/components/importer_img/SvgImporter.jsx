@@ -55,4 +55,4 @@ function Download(){
     </svg>
   );
 }
-export { StudyIcon, WorkIcon };
+export { StudyIcon, WorkIcon, Download};

@@ -29,7 +29,7 @@ function HeroHome() {
           custom={0}
           className="font-mono text-[11px] uppercase tracking-[0.45em] text-cyan-400/60"
         >
-          // HOME.JSX
+          // HELLO_WORLD.JSX
         </motion.p>
 
         <motion.h1

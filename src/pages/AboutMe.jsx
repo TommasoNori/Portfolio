@@ -3,7 +3,7 @@ import BioContainer from "../components/container/BioContainer";
 import TimeLineSection from "../components/TimeLineSection";
 import { motion } from "framer-motion";
 import HeroAboutMe from "../feature/HeroAboutMe";
-import Download from "../components/importer_img/SvgImporter"
+import { Download } from "../components/importer_img/SvgImporter"
 
 function AboutMe() {
   return (

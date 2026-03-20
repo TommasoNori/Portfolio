@@ -7,7 +7,7 @@ import Header from "./components/layout/header/Header";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import BackgroundImage from "./components/importer_img/Importer";
-import Projects from "./pages/projects/Projects";
+import Projects from "./pages/Projects";
 import Contact from "./pages/contact/Contact";
 import ScrollUp from "./components/layout/ScrollUp";
 
