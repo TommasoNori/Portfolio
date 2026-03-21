@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import BackgroundImage from "./components/importer_img/Importer";
 import Projects from "./pages/Projects";
-import Contact from "./pages/contact/Contact";
+import Contact from "./pages/Contact";
 import ScrollUp from "./components/layout/ScrollUp";
 
 function App() {
