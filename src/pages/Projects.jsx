@@ -2,19 +2,20 @@ import { motion } from "framer-motion";
 import reactlogo from "../assets/react.svg";
 import HeroProject from "../feature/project/HeroProject";
 import ProjectSection from "../feature/project/ProjectSection";
+import WorkingOn from "../components/container/WorkingOn";
 
 function Projects() {
-  const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
-    visible: (delay = 0) => ({
+  const revealCard = {
+    hidden: { opacity: 0, scale: 0.96, y: 30 },
+    visible: {
       opacity: 1,
+      scale: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
-        delay,
+        ease: [0.22, 1, 0.36, 1],
       },
-    }),
+    },
   };
 
   return (
@@ -23,37 +24,26 @@ function Projects() {
 
       <section className="relative z-10 w-full px-6 py-16 md:px-10 md:py-20 xl:px-16">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.25 }}
-            custom={0}
-            className="mb-14 flex w-full max-w-3xl flex-col items-center gap-4 rounded-[28px] border border-cyan-400/20 bg-[#050d1b]/70 px-6 py-10 text-center shadow-[0_0_28px_rgba(0,255,255,0.10)] backdrop-blur-sm md:px-10 md:py-12"
-          >
-            <h2 className="font-['Orbitron'] text-sm font-bold uppercase tracking-[0.18em] text-white/55">
-              What I&apos;m Working On
-            </h2>
-
-            <p className="max-w-2xl text-base leading-8 text-slate-300/80 italic">
-              Currently open to new projects — if you&apos;d like to commission
-              something, feel free to reach out via email.
-            </p>
-          </motion.div>
+          <WorkingOn />
 
           <ProjectSection />
 
           <motion.div
-            variants={fadeUp}
+            variants={revealCard}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.25 }}
-            custom={0.2}
             className="mt-16 w-full max-w-4xl rounded-[28px] border border-cyan-400/20 bg-[#050d1b]/70 px-5 py-6 shadow-[0_0_28px_rgba(0,255,255,0.10)] backdrop-blur-sm md:px-10 md:py-9"
           >
+            <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.35em] text-cyan-400/60">
+              // STACK
+            </p>
+
             <h2 className="mb-4 text-center font-['Orbitron'] text-2xl font-bold text-white md:text-left md:text-[1.7rem]">
               This Website
             </h2>
+
+            <div className="mx-auto mb-5 h-px w-16 bg-cyan-400/30 shadow-[0_0_10px_rgba(0,255,255,0.25)] md:mx-0" />
 
             <p className="text-center text-[0.98rem] leading-8 text-slate-300 md:text-left md:text-base">
               This website is a personal project built with React and Vite,

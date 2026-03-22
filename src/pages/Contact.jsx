@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import HeroContact from "../feature/contact/HeroContact";
 
 const sendEmail = (e) => {
   e.preventDefault();
@@ -39,21 +40,7 @@ function Contact() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(30,60,120,0.15)_0%,transparent_60%),radial-gradient(ellipse_at_80%_30%,rgba(20,40,90,0.12)_0%,transparent_50%)]" />
 
       <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0}
-          className="mb-12 text-center"
-        >
-          <p className="mb-4 font-mono text-[12px] uppercase tracking-[0.45em] text-cyan-400/70">
-            // CONTACT.JSX
-          </p>
-
-          <h1 className="font-['Orbitron'] text-[clamp(2.8rem,8vw,6rem)] font-extrabold uppercase tracking-[0.08em] text-cyan-400 [text-shadow:0_0_12px_rgba(0,255,255,0.45),0_0_40px_rgba(0,255,255,0.2)]">
-            Contact
-          </h1>
-        </motion.div>
+        <HeroContact/>
 
         <motion.div
           variants={fadeUp}

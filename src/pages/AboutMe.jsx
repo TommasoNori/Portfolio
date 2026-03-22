@@ -1,9 +1,9 @@
 import WhoIamContainer from "../components/container/WhoIamContainer";
 import BioContainer from "../components/container/BioContainer";
-import TimeLineSection from "../components/TimeLineSection";
+import TimeLineSection from "../feature/aboutme/TimeLineSection";
 import { motion } from "framer-motion";
-import HeroAboutMe from "../feature/HeroAboutMe";
-import { Download } from "../components/importer_img/SvgImporter"
+import HeroAboutMe from "../feature/aboutme/HeroAboutMe";
+import { Download } from "../components/importer_img/SvgImporter";
 
 function AboutMe() {
   return (
@@ -53,7 +53,7 @@ function AboutMe() {
                 link.click();
               }}
             >
-              <Download/>
+              <Download />
               Download my CV
             </button>
           </div>

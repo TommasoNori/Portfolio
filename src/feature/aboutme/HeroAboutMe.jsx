@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
 function HeroAboutMe() {
+const text = "About Me";
+
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (delay = 0) => ({
@@ -27,21 +29,40 @@ function HeroAboutMe() {
           // ABOUT_ME.JSX
         </motion.p>
 
-        <motion.h1
-          variants={fadeUp}
-          initial="hidden"
-          animate="visible"
-          custom={0.2}
-          className="font-['Orbitron'] text-[clamp(3rem,9vw,7rem)] font-extrabold uppercase tracking-[0.08em] text-cyan-400 [text-shadow:0_0_12px_rgba(0,255,255,0.45),0_0_40px_rgba(0,255,255,0.2)]"
-        >
-          About Me
+        <motion.h1 className="font-['Orbitron'] text-[clamp(3rem,8vw,6.5rem)] font-extrabold uppercase tracking-[0.08em] text-cyan-400 [text-shadow:0_0_12px_rgba(0,255,255,0.45),0_0_40px_rgba(0,255,255,0.2)]">
+          {text.split("").map((char, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: i * 0.05,
+                duration: 0.35,
+                ease: "easeOut",
+              }}
+            >
+              {char}
+            </motion.span>
+          ))}
+
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0, 1, 0] }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+            }}
+            className="ml-1"
+          >
+            |
+          </motion.span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={0.4}
+          custom={0.6}
           className="mt-5 text-sm tracking-[0.28em] text-white/50 md:text-base"
         >
           Tommaso Nori • CS Student • Rimini, IT
@@ -51,7 +72,7 @@ function HeroAboutMe() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          custom={0.6}
+          custom={0.8}
           className="mt-6 h-px w-40 bg-cyan-400/30 shadow-[0_0_12px_rgba(0,255,255,0.35)]"
         />
       </div>
